@@ -1,5 +1,6 @@
 # hopenhayn.jl
 # Continuous-Time Hopenhayn Model Implementation in Julia
+# Based on Ben Moll's Hopenhayn Replication https://benjaminmoll.com/wp-content/uploads/2020/06/hopenhayn.m
 using UnPack
 using Parameters
 using LinearAlgebra
