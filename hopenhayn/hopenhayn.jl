@@ -8,7 +8,7 @@ using SparseArrays
 using PATHSolver
 using Plots
 
-include("src/finitediff.jl")
+include("../src/finitediff.jl")
 
 Base.@kwdef mutable struct ModelParameters
     # ones that need to be updated but are exogenous for firms 
