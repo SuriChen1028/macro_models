@@ -4,7 +4,7 @@ given p, w
 
 solve a $\bar{v}(\phi, p, w)$ in the following way:
 - guess a v_init as a function of $\phi, p, w$, in the meantime $\phi$ is also evenly distributed.
-- solve for $v_new = Tv := max \pi(\phi, p, w) + \max\{ 0, \int v(\phi, p, w) d \mu(\phi) \} $ for every $\phi$ in the state space
+- solve for $v_new = Tv := max \pi(\phi, p, w) + \max\{ 0, \int v(\phi, p, w) d \mu(\phi) \}$ for every $\phi$ in the state space
     - given $v$ and $\phi$
     - update to $A_{t+1}\phi_t$, and extrapolate to $v(A_{t+1}\phi_t)$ and compute the mean
     - compute $Tv$ and $||v-Tv||$, iterate if the norm is larger than the tolerance level
@@ -24,6 +24,6 @@ The mid point is therefore the equilibrium price.
 Next step to get the stationary distribution. given $p^*$ and $\bar{v}(\phi, p^*, w)$, simulate over a long period of time. so that the sample $\phi$'s are the the stationary ones.
 
 
-[[run.jl]] runs the discrete-time version. Essential solvers are in the [[src/model.jl]].
+[run.jl](run.jl) runs the discrete-time version. Essential solvers are in the [src/model.jl](src/model.jl).
 
-[[hopenhayn.jl]] runs the continuous time problem.
+[hopenhayn.jl](hopenhayn.jl) runs the continuous time problem.
