@@ -1,7 +1,7 @@
 **/.ipynb_checkpoints
 **/.vscode
 *.jl.cov
-./indivisibledurables/*
+./indivisibledurables/**
+**/indivisibledurables
 ./.DS_Store
-./indivisibledurables
 ./.Rhistory
