@@ -1,4 +1,4 @@
-include("src/model_gpu.jl")
+include("../src/model_gpu.jl")
 
 using Plots; gr()
 using CUDA

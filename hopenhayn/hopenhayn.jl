@@ -96,8 +96,8 @@ function update_price(p_old, w_old, params::ModelParameters, grids::Grids;
     v_star_vec = v_star.(z_grid, Ref(p), Ref(w))
 
     # solve for LCP
-    bc = (MyPackage.Reflecting(), MyPackage.Reflecting())
-    L_operator = min.(Diagonal(mu),0) * MyPackage.∇1bcm(z_grid_bar, bc) + max.(Diagonal(mu),0) * MyPackage.∇1bcp(z_grid_bar, bc) + 0.5 * Diagonal(sigma.^2) * MyPackage.∇2bc(z_grid_bar, bc)
+    bc = (Reflecting(), Reflecting())
+    L_operator = min.(Diagonal(mu),0) * ∇1bcm(z_grid_bar, bc) + max.(Diagonal(mu),0) * ∇1bcp(z_grid_bar, bc) + 0.5 * Diagonal(sigma.^2) * ∇2bc(z_grid_bar, bc)
     A = I * ρ - L_operator
     q = - π.(z_grid, Ref(p), Ref(w), Ref(params)) .+ A * v_star_vec
 

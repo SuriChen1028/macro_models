@@ -1,4 +1,4 @@
-include("src/model.jl")
+include("../src/model.jl")
 
 using Plots; gr()
 
