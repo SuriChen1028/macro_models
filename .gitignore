@@ -2,3 +2,6 @@
 **/.vscode
 *.jl.cov
 ./indivisibledurables/*
+./.DS_Store
+./indivisibledurables
+./.Rhistory
